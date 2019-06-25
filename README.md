@@ -1,3 +1,8 @@
+This is a fork to add some features:
+- I need to also be able to add an ArrayBuffer as the 'sample' property to Sample component <- currently this only accepts URL strings.
+- The Sequencer needs improvement for real-time note updates as a bar is being played. WebAudioAPI scheduled sample plays cannot be changed once set. In react-music v1.0.3 the entire bar is scheduled in advance. So changes are not possible in the currently playing bar. 
+
+
 [![Maintenance Status][maintenance-image]](#maintenance-status)
 
 
