@@ -10,7 +10,7 @@ type Props = {
   children?: any;
   detune?: number;
   gain?: number;
-  sample: string;
+  sample: string|ArrayBuffer;
   steps: Array<any>;
 };
 
@@ -41,7 +41,7 @@ export default class Sampler extends Component {
     children: PropTypes.node,
     detune: PropTypes.number,
     gain: PropTypes.number,
-    sample: PropTypes.string.isRequired,
+    sample: PropTypes.oneOfType([ PropTypes.string.isRequired, PropTypes.array.isRequired ]),
     steps: PropTypes.array.isRequired,
   };
   static defaultProps = {
