@@ -41,7 +41,7 @@ export default class Sampler extends Component {
     children: PropTypes.node,
     detune: PropTypes.number,
     gain: PropTypes.number,
-    sample: PropTypes.oneOfType([ PropTypes.string.isRequired, PropTypes.array.isRequired ]),
+    sample: PropTypes.oneOfType([ PropTypes.string.isRequired, PropTypes.instanceOf(ArrayBuffer).isRequired ]),
     steps: PropTypes.array.isRequired,
   };
   static defaultProps = {
