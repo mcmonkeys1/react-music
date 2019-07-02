@@ -63,6 +63,9 @@ export default class Song extends Component {
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
     this.audioContext = new AudioContext();
 
+		//HACK! for Chrome default audiocontext suspended behaviour
+    window.reactMusicContext = this.audioContext;
+
     this.scheduler = new Scheduler({
       context: this.audioContext,
     });
